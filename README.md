@@ -23,13 +23,13 @@ Some of the features of the app include
 
 
 ## Screenshot 1
-<img src="https://github.com/abhishekdubey331/News-Room/blob/master/screens/screen_1.jpg">
+<img src="https://github.com/abhishekdubey331/News-Room/blob/master/screens/screen_1.png">
 
 ## Screenshot 2
-<img src="https://github.com/abhishekdubey331/News-Room/blob/master/screens/screen_2.jpg">
+<img src="https://github.com/abhishekdubey331/News-Room/blob/master/screens/screen_2.png">
 
 ## Screenshot 3
-<img src="https://github.com/abhishekdubey331/News-Room/blob/master/screens/screen_3.jpg">
+<img src="https://github.com/abhishekdubey331/News-Room/blob/master/screens/screen_3.png">
 
 
 
