@@ -44,7 +44,7 @@ class NewsStoryServiceTest {
     fun getTrendingRepos() {
         queueResponse {
             setResponseCode(200)
-            setBody(DependencyProvider.getResponseFromJson("repos"))
+            setBody(DependencyProvider.getResponseFromJson("sample_news"))
         }
 
         newsStoryService
@@ -53,7 +53,10 @@ class NewsStoryServiceTest {
                 .run {
                     assertNoErrors()
                     assertValueCount(1)
-                   // Assert.assertEquals(values()[0].size, 25)
+                    Assert.assertEquals(values()[0].totalResults, 38)
+                    Assert.assertEquals(values()[0].newsArticles?.get(0)?.author, "Igor Bonifacic")
+                    Assert.assertEquals(values()[0].newsArticles?.get(1)?.title, "Call of Duty: Warzone world records for most kills - Dexerto")
+                    Assert.assertEquals(values()[0].newsArticles?.get(2)?.publishedAt, "2020-03-14T10:43:33Z")
                 }
     }
 
