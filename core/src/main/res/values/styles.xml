@@ -8,6 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:fontFamily">@font/varela_regular</item>
         <item name="fontFamily">@font/varela_regular</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="actionable_text" parent="Base.TextAppearance.AppCompat.Caption">
@@ -19,7 +21,7 @@
     </style>
 
 
-    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+    <style name="ToolbarTheme" parent="@style/AppTheme">
         <!-- Customize color of navigation drawer icon and back arrow -->
         <item name="colorControlNormal">@color/finestWhite</item>
     </style>
