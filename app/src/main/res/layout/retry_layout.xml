@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/retry_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/no_internet_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/no_internet_connection" />
+
+    <LinearLayout
+        android:id="@+id/no_internet_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/no_internet_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/something_went_wrong"
+            android:textColor="#4A4A4A"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/an_alien"
+            android:textColor="#929292"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/retry_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/no_internet_center"
+        android:layout_marginLeft="@dimen/activity_side_margin"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="@dimen/activity_side_margin"
+        android:background="@color/colorPrimary"
+        android:text="@string/retry"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+</RelativeLayout>

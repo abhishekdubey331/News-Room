@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/newListFragment">
+
+    <fragment
+        android:id="@+id/newListFragment"
+        android:name="com.doubtnut.assignment.ui.fragments.NewsListFragment"
+        android:label="NewsListFragment"
+        tools:layout="@layout/fragment_news_list">
+        <action
+            android:id="@+id/newsListToNewsDetail"
+            app:destination="@id/newDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newDetailFragment"
+        android:name="com.doubtnut.assignment.ui.fragments.NewsDetailFragment"
+        android:label="NewsDetailFragment"
+        tools:layout="@layout/fragment_news_detail" />
+
+
+</navigation>
