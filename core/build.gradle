@@ -67,6 +67,7 @@ dependencies {
     api deps.google.gson
 
     api deps.image.glide
+    api deps.image.webView
     api deps.square.okhttpDownloader
     api deps.square.hawk
 

@@ -2,12 +2,14 @@ package com.doubtnut.assignment.di
 
 import com.core.base.di.CoreComponent
 import com.core.base.networking.Scheduler
+import com.core.base.utils.ImageHelper
 import com.core.base.utils.ToolbarHelper
 import com.doubtnut.assignment.ui.activity.ParentActivity
 import com.doubtnut.assignment.commons.data.NewsStoryService
 import com.doubtnut.assignment.model.NewsListDataContract
 import com.doubtnut.assignment.model.NewsRepository
 import com.doubtnut.assignment.model.NewsListRemoteData
+import com.doubtnut.assignment.ui.fragments.NewsDetailFragment
 import com.doubtnut.assignment.ui.fragments.NewsListFragment
 import com.doubtnut.assignment.viewmodel.NewsListViewModelFactory
 import dagger.Component
@@ -23,6 +25,7 @@ interface NewsStoryComponent {
     fun repositoryService(): NewsStoryService
     fun scheduler(): Scheduler
     fun inject(listActivity: NewsListFragment)
+    fun inject(listActivity: NewsDetailFragment)
 }
 
 @Module
@@ -55,4 +58,8 @@ class TrendingRepositoryModule {
     @Provides
     @RepositoryScope
     fun toolbarHelper(): ToolbarHelper = ToolbarHelper()
+
+    @Provides
+    @RepositoryScope
+    fun imageHelper(): ImageHelper = ImageHelper()
 }

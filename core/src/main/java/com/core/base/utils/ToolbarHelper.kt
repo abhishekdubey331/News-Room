@@ -15,7 +15,6 @@ class ToolbarHelper {
             actionBar.setDisplayHomeAsUpEnabled(showBack)
             actionBar.title = title
         }
-        toolbar.setNavigationOnClickListener { activity.finish() }
     }
 
 }

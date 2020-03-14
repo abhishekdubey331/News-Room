@@ -4,15 +4,20 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.FragmentNavigatorExtras
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.SimpleItemAnimator
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.core.base.application.BaseFragment
 import com.core.base.extensions.gone
 import com.core.base.extensions.makeVisible
 import com.core.base.extensions.provideCache
+import com.core.base.extensions.tryNavigate
 import com.core.base.networking.Outcome
+import com.core.base.utils.ImageHelper
 import com.core.base.utils.ToolbarHelper
 import com.doubtnut.assignment.R
 import com.doubtnut.assignment.adapter.NewsListAdapter
@@ -37,6 +42,9 @@ class NewsListFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
     @Inject
     lateinit var toolbarHelper: ToolbarHelper
 
+    @Inject
+    lateinit var imageHelper: ImageHelper
+
     private lateinit var adapter: NewsListAdapter
     private val viewModel: NewsListViewModel by lazy {
         ViewModelProviders.of(this, viewModelFactoryNews).get(NewsListViewModel::class.java)
@@ -44,9 +52,8 @@ class NewsListFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
 
     override val layout: Int = R.layout.fragment_news_list
 
-
     override fun setToolbar(view: View) {
-        toolbarHelper.setToolbarInFragment(base_toolbar, activity as ParentActivity, getString(R.string.app_name),false)
+        toolbarHelper.setToolbarInFragment(base_toolbar, activity as ParentActivity, getString(R.string.app_name), false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -80,7 +87,9 @@ class NewsListFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
     }
 
     private fun setAdapterToRecyclerView(data: NewsStory, context: Context) {
-        adapter = NewsListAdapter(data.newsArticles, context)
+        adapter = NewsListAdapter(data.newsArticles, context, imageHelper) { newsArticle ->
+            tryNavigate(NewsListFragmentDirections.newsListToNewsDetail(newsArticle))
+        }
         rvTrendingRepos.adapter = adapter
         (rvTrendingRepos.itemAnimator as SimpleItemAnimator).supportsChangeAnimations = false
         srlTrendingRepos.isRefreshing = false

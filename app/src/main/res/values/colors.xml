@@ -6,4 +6,5 @@
     <color name="white">#ffffff</color>
     <color name="separator_line_color">#e8e8e8</color>
     <color name="color_transparent">#55000000</color>
+    <color name="link_color">#4461FF</color>
 </resources>

@@ -79,7 +79,8 @@ buildscript {
             ],
 
             image    : [
-                    glide: "com.github.bumptech.glide:glide:3.6.1"
+                    'glide'     : "com.github.bumptech.glide:glide:3.6.1",
+                    'webView': "com.thefinestartist:finestwebview:1.2.7"
             ],
 
             facebook : [

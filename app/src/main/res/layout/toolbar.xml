@@ -6,4 +6,5 @@
     android:background="@color/colorPrimary"
     android:elevation="0dp"
     android:gravity="center"
+    app:theme="@style/ToolbarTheme"
     app:titleTextColor="@color/white" />

@@ -1,6 +1,8 @@
 package com.doubtnut.assignment.commons.data
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 
 data class NewsStory(
@@ -12,6 +14,7 @@ data class NewsStory(
         val totalResults: Int?
 )
 
+@Parcelize
 data class NewsArticle(
         @SerializedName("author")
         val author: String?,
@@ -29,11 +32,12 @@ data class NewsArticle(
         val url: String?,
         @SerializedName("urlToImage")
         val urlToImage: String?
-)
+) : Parcelable
 
+@Parcelize
 data class Source(
         @SerializedName("id")
-        val id: Any?,
+        val id: String?,
         @SerializedName("name")
         val name: String?
-)
+) : Parcelable

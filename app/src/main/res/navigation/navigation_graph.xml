@@ -12,13 +12,21 @@
         <action
             android:id="@+id/newsListToNewsDetail"
             app:destination="@id/newDetailFragment" />
+
     </fragment>
 
     <fragment
         android:id="@+id/newDetailFragment"
         android:name="com.doubtnut.assignment.ui.fragments.NewsDetailFragment"
         android:label="NewsDetailFragment"
-        tools:layout="@layout/fragment_news_detail" />
+        tools:layout="@layout/fragment_news_detail">
+
+        <argument
+            android:name="newsArticle"
+            app:argType="com.doubtnut.assignment.commons.data.NewsArticle" />
+
+
+    </fragment>
 
 
 </navigation>
