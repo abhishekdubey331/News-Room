@@ -10,7 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc3ada42-4d48-43ed-a809-e943d5d03ebd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/screens/screen_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/screen_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/screen_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/screen_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/screen_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/screen_3.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
