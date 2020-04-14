@@ -20,7 +20,7 @@ import com.doubtnut.assignment.commons.NewsStoriesDH
 import com.doubtnut.assignment.commons.data.NewsStory
 import com.doubtnut.assignment.ui.activity.ParentActivity
 import com.doubtnut.assignment.viewmodel.NewsListViewModel
-import com.doubtnut.assignment.viewmodel.ViewModelFactory
+import com.doubtnut.assignment.di.viewmodel.ViewModelFactory
 import kotlinx.android.synthetic.main.fragment_news_list.*
 import kotlinx.android.synthetic.main.retry_layout.*
 import kotlinx.android.synthetic.main.toolbar.*

@@ -9,7 +9,7 @@ import com.doubtnut.assignment.commons.data.NewsStoryService
 import com.doubtnut.assignment.model.NewsListDataContract
 import com.doubtnut.assignment.model.NewsListRemoteData
 import com.doubtnut.assignment.model.NewsRepository
-import com.doubtnut.assignment.viewmodel.ViewModelFactory
+import com.doubtnut.assignment.di.viewmodel.ViewModelFactory
 import dagger.Module
 import dagger.Provides
 import io.reactivex.disposables.CompositeDisposable

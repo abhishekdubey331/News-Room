@@ -1,4 +1,4 @@
-package com.doubtnut.assignment.di.annotation
+package com.doubtnut.assignment.di.viewmodel
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

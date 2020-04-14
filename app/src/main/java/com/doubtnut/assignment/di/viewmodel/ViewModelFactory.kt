@@ -1,9 +1,7 @@
-package com.doubtnut.assignment.viewmodel
+package com.doubtnut.assignment.di.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.doubtnut.assignment.model.NewsListDataContract
-import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
 import javax.inject.Provider
 
