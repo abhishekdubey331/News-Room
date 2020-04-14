@@ -8,9 +8,10 @@ import com.doubtnut.assignment.commons.NewsStoriesDH
 import com.doubtnut.assignment.commons.data.NewsStory
 import com.doubtnut.assignment.model.NewsListDataContract
 import io.reactivex.disposables.CompositeDisposable
+import javax.inject.Inject
 
-class NewsListViewModel(private val repo: NewsListDataContract.Repository,
-                        private val compositeDisposable: CompositeDisposable) : ViewModel() {
+class NewsListViewModel @Inject constructor(private val repo: NewsListDataContract.Repository,
+                                            private val compositeDisposable: CompositeDisposable) : ViewModel() {
 
     val postsOutcome: LiveData<Outcome<NewsStory>> by lazy {
         repo.postFetchOutcome.toLiveData(compositeDisposable)
@@ -29,6 +30,6 @@ class NewsListViewModel(private val repo: NewsListDataContract.Repository,
     override fun onCleared() {
         super.onCleared()
         compositeDisposable.clear()
-        NewsStoriesDH.destroyNewsStoryComponentt()
+        NewsStoriesDH.destroyNewsStoryComponent()
     }
 }

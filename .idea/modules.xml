@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DoubtNut.iml" filepath="$PROJECT_DIR$/DoubtNut.iml" group="DoubtNut" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="DoubtNut/app" />
-      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" group="DoubtNut/core" />
+      <module fileurl="file://$PROJECT_DIR$/NewsMania.iml" filepath="$PROJECT_DIR$/NewsMania.iml" group="NewsMania" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="NewsMania/app" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" group="NewsMania/core" />
     </modules>
   </component>
 </project>

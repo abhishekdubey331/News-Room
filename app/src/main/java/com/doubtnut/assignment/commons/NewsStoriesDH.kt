@@ -15,7 +15,7 @@ object NewsStoriesDH {
         return newsStoryComponent as NewsStoryComponent
     }
 
-    fun destroyNewsStoryComponentt() {
+    fun destroyNewsStoryComponent() {
         newsStoryComponent = null
     }
 }

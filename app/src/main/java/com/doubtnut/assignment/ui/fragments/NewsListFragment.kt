@@ -3,18 +3,13 @@ package com.doubtnut.assignment.ui.fragments
 import android.content.Context
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.navigation.fragment.FragmentNavigatorExtras
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.SimpleItemAnimator
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.core.base.application.BaseFragment
 import com.core.base.extensions.gone
 import com.core.base.extensions.makeVisible
-import com.core.base.extensions.provideCache
 import com.core.base.extensions.tryNavigate
 import com.core.base.networking.Outcome
 import com.core.base.utils.ImageHelper
@@ -25,7 +20,7 @@ import com.doubtnut.assignment.commons.NewsStoriesDH
 import com.doubtnut.assignment.commons.data.NewsStory
 import com.doubtnut.assignment.ui.activity.ParentActivity
 import com.doubtnut.assignment.viewmodel.NewsListViewModel
-import com.doubtnut.assignment.viewmodel.NewsListViewModelFactory
+import com.doubtnut.assignment.viewmodel.ViewModelFactory
 import kotlinx.android.synthetic.main.fragment_news_list.*
 import kotlinx.android.synthetic.main.retry_layout.*
 import kotlinx.android.synthetic.main.toolbar.*
@@ -37,7 +32,7 @@ class NewsListFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
     private val component by lazy { NewsStoriesDH.newsStoryComponent() }
 
     @Inject
-    lateinit var viewModelFactoryNews: NewsListViewModelFactory
+    lateinit var viewModelFactoryNews: ViewModelFactory
 
     @Inject
     lateinit var toolbarHelper: ToolbarHelper

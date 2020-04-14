@@ -9,7 +9,7 @@ buildscript {
             'compileSdk'       : 27,
 
             'buildTools'       : '27.0.2',
-            'androidPlugin'    : '3.6.1',
+            'androidPlugin'    : '3.6.2',
             'kotlin'           : '1.3.10',
             'archComp'         : '1.1.0',
             'livedataTesting'  : '1.1.0',
